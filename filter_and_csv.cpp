@@ -24,7 +24,7 @@ int main(){
   auto j = json::parse(buffer.str());
   //close the file
   infile.close();
-  //Create a file that will output the results into
+  //Create a file that will output/append the results into
   std::ofstream outfile("csv_data_to_import.csv", std::ofstream::out | std::ofstream::app);   
   if( outfile.is_open()){
     //This will output the description with the largest count

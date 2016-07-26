@@ -1,5 +1,7 @@
-while IFS='' read -r line || [[ -n "$line" ]]; do
-  echo "$line"
+#!/bin/bash
+rm -f csv_data_to_import.csv
+while IFS='' read -r line || [[ -n "$line" ]]; do \
+  echo "$line" 
   curl -G http://octopart.com/api/v3/parts/search \
   -d q=$line \
   -d apikey=$OCTOPART_API_KEY \
