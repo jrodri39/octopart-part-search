@@ -27,12 +27,13 @@ int main(){
   //Create a file that will output/append the results into
   std::ofstream outfile("csv_data_to_import.csv", std::ofstream::out | std::ofstream::app);   
   if( outfile.is_open()){
+/*
     //This will output the description with the largest count
     //outfile \
     << std::setw(2) \
     << j["facet_results"]["fields"]["descriptions.value"]["facets"][1]["value"] \
     << std::endl; 
-    
+*/    
    
     
     //Create Array for the name of each spec
@@ -260,7 +261,7 @@ int main(){
     
     //This will pull every description for the parts search sorted by count
     outfile << ",Description,"; //header
-    for(  int i = 0; \
+    for( unsigned int i = 0; \
     i < j["facet_results"]["fields"]["descriptions.value"]["facets"].size();\
     i++){
       outfile \

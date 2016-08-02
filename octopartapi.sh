@@ -24,5 +24,5 @@ while IFS='' read -r line || [[ -n "$line" ]]; do \
   -d facet[fields][specs.wavelength.value][include]=true \
   -d facet[fields][specs.weight.value][include]=true \
   -d facet[fields][specs.wire_gauge.value][include]=true 
-  ./sis_inventory
+  ./filter_and_csv
 done < "partslist.txt"

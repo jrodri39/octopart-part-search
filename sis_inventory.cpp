@@ -27,14 +27,14 @@ int main(){
   //Create a file that will output the results into
   std::ofstream outfile("data_to_import.txt", std::ofstream::out);   
   if( outfile.is_open()){
-    //This will output the description with the largest count
-    //outfile \
+    /*This will output the description with the largest count
+    outfile \
     << std::setw(2) \
     << j["facet_results"]["fields"]["descriptions.value"]["facets"][1]["value"] \
     << std::endl; 
-    
+	*/ 
     //This will pull every description for the parts search sorted by count
-    for(  int i = 0; \
+    for(  unsigned int i = 0; \
     i < j["facet_results"]["fields"]["descriptions.value"]["facets"].size();\
     i++){
       outfile \
