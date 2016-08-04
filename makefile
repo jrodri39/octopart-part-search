@@ -9,9 +9,9 @@ filter_and_csv : $(OBJS)
 	
 filter_and_csv.o : json.hpp
 	$(CXX) $(CXXFLAGS) filter_and_csv.cpp
-#	
-#clean:
-#	\rm *.o *~ p1
+	
+clean:
+	\rm *.o *~ filter_and_csv csv_data_to_import.csv results.txt
 #
 #tar:
 #	tar cfv p1.tar Movie.h Movie.cpp Name.h Name.cpp NameList.h \
