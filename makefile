@@ -1,10 +1,12 @@
-OBJS = filter_and_csv.o
+SOURCES = filter_and_csv.cpp
+OBJS = $(SOURCES:.cpp=.o)
 CXX = g++
 DEBUG = -g
 CXXFLAGS = -std=c++11 -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
+EXECUTABLE=filter_and_csv
 	
-filter_and_csv : $(OBJS)
+$(EXECUTABLE) : $(OBJS)
 	$(CXX) $(LFLAGS) $(OBJS) -o filter_and_csv
 	
 filter_and_csv.o : json.hpp

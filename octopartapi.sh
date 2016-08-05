@@ -1,7 +1,10 @@
 #!/bin/bash
 rm -f csv_data_to_import.csv
+NUMPARTS=$(wc -l < partslist.txt)
+ITERPART=0
 while IFS='' read -r line || [[ -n "$line" ]]; do \
-  echo "$line" 
+  ITERPART=$((ITERPART+1))
+  echo  "$line is $ITERPART of $NUMPARTS" 
   curl -G http://octopart.com/api/v3/parts/search \
   -d q=$line \
   -d apikey=$OCTOPART_API_KEY \
