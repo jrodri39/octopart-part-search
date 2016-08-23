@@ -68,11 +68,14 @@ these steps.
 Replace $OCTOPART_API_KEY (from octopartapi.sh file)with the api key that must
 be retrieved after signing up at [OCTOPART](https://octopart.com/api/home)
 On the command line type:
-```make clean
 ```
-```make
+make clean
 ```
-```sh octopartapi.sh
+```
+make
+```
+```
+sh octopartapi.sh
 ```
 
 
